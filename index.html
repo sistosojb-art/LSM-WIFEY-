@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Space — September 2026 🌷</title>
+
+<meta name="theme-color" content="#d86b9a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Our Space">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   BASIC
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:
+        radial-gradient(circle at top left,#ffe0ec,transparent 35%),
+        radial-gradient(circle at bottom right,#ffd5e5,transparent 35%),
+        linear-gradient(135deg,#fff7fa,#fff0f5);
+    color:#633d50;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+#intro{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:
+        radial-gradient(circle at top,#ffd7e8,transparent 45%),
+        linear-gradient(135deg,#fff0f6,#ffe0ec);
+
+    animation:introDisappear 1s ease forwards;
+    animation-delay:4s;
+}
+
+#intro img{
+    width:130px;
+    height:130px;
+    object-fit:cover;
+    border-radius:35px;
+
+    border:5px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 15px 40px rgba(190,80,130,.25);
+
+    animation:introFloat 2s infinite;
+}
+
+#intro h1{
+    margin-top:20px;
+
+    font-family:'Dancing Script',cursive;
+
+    color:#c65486;
+    font-size:3.2rem;
+}
+
+#intro p{
+    margin-top:8px;
+    color:#a65a7c;
+}
+
+.loader{
+    display:flex;
+    gap:9px;
+    margin-top:25px;
+}
+
+.loader span{
+    width:11px;
+    height:11px;
+    border-radius:50%;
+    background:#d86b9a;
+
+    animation:loader .8s infinite alternate;
+}
+
+.loader span:nth-child(2){
+    animation-delay:.2s;
+}
+
+.loader span:nth-child(3){
+    animation-delay:.4s;
+}
+
+@keyframes loader{
+    from{
+        transform:translateY(0);
+        opacity:.4;
+    }
+
+    to{
+        transform:translateY(-10px);
+        opacity:1;
+    }
+}
+
+@keyframes introFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+@keyframes introDisappear{
+    to{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+#floating-hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.floating-heart{
+    position:absolute;
+    bottom:-40px;
+    opacity:.35;
+
+    animation:heartFloat linear infinite;
+}
+
+@keyframes heartFloat{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.4;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(25deg);
+        opacity:0;
+    }
+
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.container{
+    width:100%;
+    max-width:720px;
+    margin:auto;
+    padding:20px 17px 110px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    text-align:center;
+    padding:35px 10px 20px;
+}
+
+.month-label{
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:.72rem;
+    color:#b45a80;
+}
+
+.hero-flower{
+    font-size:2.5rem;
+    margin:12px;
+}
+
+.hero h1{
+    font-family:'Dancing Script',cursive;
+    font-size:3.5rem;
+    color:#c65486;
+    line-height:1;
+}
+
+.hero h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.65rem;
+    font-weight:600;
+    color:#805169;
+    margin-top:10px;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card{
+    background:rgba(255,255,255,.9);
+
+    border:1px solid rgba(198,84,134,.13);
+
+    border-radius:30px;
+
+    padding:27px 23px;
+
+    margin:20px 0;
+
+    box-shadow:
+        0 15px 40px rgba(110,55,85,.10);
+
+    backdrop-filter:blur(10px);
+
+    animation:cardAppear .7s ease;
+}
+
+@keyframes cardAppear{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.card h3{
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#c65486;
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:.96rem;
+    line-height:1.9;
+    margin:12px 0;
+}
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter{
+    border:3px solid #f3c0d4;
+
+    position:relative;
+}
+
+.letter:before{
+    content:"🌷";
+    position:absolute;
+    top:-17px;
+    left:22px;
+
+    background:white;
+    padding:2px 8px;
+
+    border-radius:20px;
+}
+
+.highlight{
+    background:#fff0f6;
+
+    border-left:5px solid #d86b9a;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin:18px 0;
+
+    line-height:1.8;
+}
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.signature{
+    text-align:right;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:2rem;
+
+    color:#c65486;
+
+    margin-top:20px;
+}
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.main-photo{
+    width:100%;
+    max-width:330px;
+
+    display:block;
+
+    margin:20px auto;
+
+    border-radius:28px;
+
+    border:6px solid white;
+
+    box-shadow:
+        0 12px 35px rgba(190,80,130,.20);
+}
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+.music-card{
+    text-align:center;
+}
+
+.music-logo{
+    width:100px;
+    height:100px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:5px solid white;
+
+    box-shadow:
+        0 10px 25px rgba(190,80,130,.20);
+
+    animation:musicFloat 3s infinite;
+}
+
+@keyframes musicFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-7px);
+    }
+
+}
+
+.music-title{
+    margin:15px 0;
+
+    font-weight:600;
+
+    color:#c65486;
+}
+
+.music-btn,
+.action-btn{
+    border:none;
+
+    padding:13px 25px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #d86b9a,
+        #b94f7e
+    );
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 20px rgba(185,79,126,.22);
+
+    transition:.3s;
+}
+
+.music-btn:hover,
+.action-btn:hover{
+    transform:scale(1.05);
+}
+
+#audio-player{
+    width:100%;
+    margin-top:18px;
+    display:none;
+}
+
+/* =========================================================
+   PRAYER
+========================================================= */
+
+.prayer{
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.95),
+            rgba(255,235,244,.9)
+        );
+}
+
+.prayer-symbol{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:8px;
+}
+
+/* =========================================================
+   VERSE
+========================================================= */
+
+.verse{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.45rem !important;
+
+    text-align:center;
+
+    color:#805169;
+
+    line-height:1.6 !important;
+}
+
+.verse-reference{
+    text-align:center;
+
+    font-size:.85rem !important;
+
+    color:#b45a80;
+}
+
+/* =========================================================
+   COMFORT BUTTON
+========================================================= */
+
+.center{
+    text-align:center;
+}
+
+.hidden{
+    display:none;
+}
+
+.reveal{
+    display:block;
+
+    animation:reveal .6s ease;
+}
+
+@keyframes reveal{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================================================
+   REMINDERS
+========================================================= */
+
+.reminder-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    margin-top:15px;
+}
+
+.reminder-buttons button{
+    border:1px solid #efb4cd;
+
+    background:#fff5f9;
+
+    color:#a84f75;
+
+    padding:10px 14px;
+
+    border-radius:30px;
+
+    font-family:'Poppins';
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.reminder-buttons button:hover{
+    background:#f9d8e6;
+    transform:translateY(-2px);
+}
+
+#reminder{
+    margin-top:18px;
+}
+
+/* =========================================================
+   GRATITUDE
+========================================================= */
+
+.gratitude-result{
+    min-height:65px;
+
+    margin-top:18px;
+
+    padding:17px;
+
+    background:#fff0f6;
+
+    border-radius:18px;
+
+    border-left:5px solid #d86b9a;
+
+    line-height:1.7;
+}
+
+/* =========================================================
+   HEART GAME
+========================================================= */
+
+.heart-game{
+    text-align:center;
+}
+
+#heart-container{
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin:20px 0;
+}
+
+.tap-heart{
+    border:none;
+    background:none;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.tap-heart:hover{
+    transform:scale(1.3);
+}
+
+.tap-heart.clicked{
+    opacity:.25;
+    transform:scale(.7);
+}
+
+#heart-result{
+    color:#c65486;
+
+    font-weight:600;
+
+    line-height:1.8;
+}
+
+/* =========================================================
+   SECRET
+========================================================= */
+
+.secret-button{
+    width:100%;
+
+    margin-top:8px;
+
+    border:2px solid #e7a9c2;
+
+    background:rgba(255,255,255,.85);
+
+    color:#a64e75;
+
+    padding:14px;
+
+    border-radius:50px;
+
+    font-family:'Poppins';
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.secret-button:hover{
+    background:#ffe4ef;
+}
+
+.secret-message{
+    margin-top:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(198,84,134,.9),
+            rgba(135,68,100,.95)
+        );
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:
+        0 15px 35px rgba(100,45,75,.25);
+}
+
+.secret-heart{
+    font-size:4rem;
+
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.12);
+    }
+
+}
+
+/* =========================================================
+   PHOTO MEMORY
+========================================================= */
+
+.photo-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:18px;
+}
+
+.photo-grid img{
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:4px solid white;
+
+    box-shadow:
+        0 8px 20px rgba(180,80,125,.15);
+
+    transition:.4s;
+}
+
+.photo-grid img:hover{
+    transform:scale(1.04) rotate(1deg);
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline{
+    position:relative;
+
+    margin-top:20px;
+
+    padding-left:25px;
+}
+
+.timeline:before{
+    content:"";
+
+    position:absolute;
+
+    left:7px;
+
+    top:0;
+
+    bottom:0;
+
+    width:2px;
+
+    background:#e4a2bd;
+}
+
+.timeline-item{
+    position:relative;
+
+    margin-bottom:25px;
+
+    padding-left:15px;
+}
+
+.timeline-item:before{
+    content:"♥";
+
+    position:absolute;
+
+    left:-26px;
+
+    top:0;
+
+    width:22px;
+
+    height:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#d86b9a;
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:.65rem;
+}
+
+.timeline-item h4{
+    color:#c65486;
+
+    margin-bottom:5px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    text-align:center;
+
+    margin-top:30px;
+
+    color:#a5798e;
+
+    font-size:.78rem;
+
+    line-height:1.7;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:480px){
+
+    .container{
+        padding-left:13px;
+        padding-right:13px;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero h2{
+        font-size:1.4rem;
+    }
+
+    .card{
+        padding:23px 18px;
+        border-radius:25px;
+    }
+
+    .card h3{
+        font-size:1.8rem;
+    }
+
+    .card p{
+        font-size:.91rem;
+    }
+
+    .photo-grid{
+        gap:8px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<div id="intro">
+
+    <img src="logo.png" alt="Our Space">
+
+    <h1>Our Space 💞</h1>
+
+    <p>Welcome to September, Wifey… 🌷</p>
+
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     FLOATING HEARTS
+========================================================= -->
+
+<div id="floating-hearts"></div>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="container">
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="month-label">
+        A new chapter • September 2026
+    </div>
+
+    <div class="hero-flower">
+        🌷
+    </div>
+
+    <h1>
+        For My Wifey
+    </h1>
+
+    <h2>
+        Another month, another chapter of us. 💞
+    </h2>
+
+</section>
+
+
+<!-- =========================================================
+     MAIN LETTER
+========================================================= -->
+
+<section class="card letter">
+
+    <h3>
+        Open My Heart 💌
+    </h3>
+
+    <p>
+        Wifey, welcome to September. 🌷
+    </p>
+
+    <p>
+        Another month has arrived, and honestly, I don't want
+        to simply say "Happy September" and leave it at that.
+        I want you to know what is inside my heart as we enter
+        another chapter together.
+    </p>
+
+    <p>
+        We've already experienced so many things together.
+        We've had beautiful days, difficult days, moments where
+        we understood each other perfectly, and moments where
+        we didn't know what to say.
+    </p>
+
+    <p>
+        We've made mistakes. We've learned from them. We've
+        struggled with our emotions, our thoughts, our fears,
+        and sometimes even with ourselves.
+    </p>
+
+    <div class="highlight">
+
+        But Wifey, I don't want our mistakes to become the
+        entire story of us.
+
+    </div>
+
+    <p>
+        I want September to be another chance.
+    </p>
+
+    <p>
+        Another chance to communicate better.
+        Another chance to understand each other.
+        Another chance to forgive.
+        Another chance to grow.
+        Another chance to choose what is right.
+    </p>
+
+    <p>
+        And most importantly, another chance to keep growing
+        closer to the Lord.
+    </p>
+
+    <p>
+        I know sometimes you overthink whether you're getting
+        closer to God or not. I know there are moments when
+        you feel guilty because you don't pray as much as you
+        used to, or because you make mistakes even when you
+        genuinely want to do better.
+    </p>
+
+    <p>
+        But I hope you understand something, Wifey:
+        struggling doesn't automatically mean you're moving
+        away from Him.
+    </p>
+
+    <p>
+        Sometimes growing means realizing how much you need
+        Him. Sometimes growing means falling, recognizing it,
+        and choosing to get back up.
+    </p>
+
+    <div class="highlight">
+
+        I don't want to be someone who pulls you away from God.
+        I want to become someone who encourages you to seek Him
+        more, even when I have to grow and change myself.
+
+    </div>
+
+    <p>
+        I love you deeply. But I also want to learn how to love
+        you properly—with patience, honesty, self-control,
+        forgiveness, faithfulness, and understanding.
+    </p>
+
+    <p>
+        I don't want our relationship to only be about happy
+        moments. I want it to teach us how to become better
+        people.
+    </p>
+
+    <p>
+        So if September becomes difficult, please don't think
+        you have to carry everything alone.
+    </p>
+
+    <p>
+        When you're tired, rest.
+        When you're confused, pray.
+        When you're scared, breathe.
+        When you make a mistake, learn.
+        When you feel far from God, come back.
+    </p>
+
+    <p>
+        And when you need someone to remind you that you're
+        loved, I'll be here.
+    </p>
+
+    <p>
+        I'm not asking you to be perfect, Wifey.
+        I don't want perfection from you because I know I'm not
+        perfect either.
+    </p>
+
+    <p>
+        I simply want us to keep trying.
+    </p>
+
+    <p>
+        One day at a time.
+        One prayer at a time.
+        One lesson at a time.
+        One choice at a time.
+    </p>
+
+    <p>
+        Happy September, Wifey. 🌷
+    </p>
+
+    <p>
+        Whatever this month brings, I hope you remember that
+        you are deeply loved, appreciated, and worth fighting
+        for in the right way.
+    </p>
+
+    <div class="signature">
+        Always here,<br>
+        Hubby 💞
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PHOTO
+========================================================= -->
+
+<section class="card center">
+
+    <h3>
+        One Of My Favorite Memories 📸
+    </h3>
+
+    <img
+        src="your-photo.jpg"
+        class="main-photo"
+        alt="Our favorite memory"
+    >
+
+    <p>
+        Every picture has a story.
+        And this one reminds me that I get to experience
+        another chapter of life with you.
+    </p>
+
+</section>
+
+
+<!-- =========================================================
+     MUSIC
+========================================================= -->
+
+<section class="card music-card">
+
+    <h3>
+        Our Song 🎶
+    </h3>
+
+    <img
+        src="music-logo.jpg"
+        class="music-logo"
+        alt="Our song"
+    >
+
+    <div class="music-title">
+        A little song for us 💞
+    </div>
+
+    <button
+        class="music-btn"
+        onclick="toggleMusic()"
+    >
+
+        <span id="music-icon">🎵</span>
+
+        <span id="music-text">
+            Play Our Song
+        </span>
+
+    </button>
+
+    <audio
+        id="audio-player"
+        controls
+    >
+
+        <source
+            src="our-song.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+</section>
+
+
+<!-- =========================================================
+     TIRED DAY
+========================================================= -->
+
+<section class="card center">
+
+    <h3>
+        For Your Tired Days 🌙
+    </h3>
+
+    <p>
+        If today feels heavy, press this.
+        You don't have to explain anything.
+    </p>
+
+    <button
+        class="action-btn"
+        onclick="showComfort()"
+    >
+        I'm tired today 🥺
+    </button>
+
+    <div
+        id="comfort"
+        class="highlight hidden"
+    >
+
+        Wifey, you don't have to solve everything tonight.
+
+        <br><br>
+
+        Put down whatever you can put down.
+        Breathe slowly.
+        Rest your mind.
+
+        <br><br>
+
+        You are allowed to be tired.
+        You are allowed to pause.
+        You are allowed to begin again tomorrow.
+
+        <br><br>
+
+        I'm proud of you for still trying,
+        even on the days when trying feels difficult.
+
+      💞🌷
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRAYER
+========================================================= -->
+
+<section class="card prayer">
+
+    <div class="prayer-symbol">
+        ✝️
+    </div>
+
+    <h3>
+        Our September Prayer
+    </h3>
+
+    <p>
+        Lord, thank You for allowing us to enter another month.
+    </p>
+
+    <p>
+        Please guide Wifey in everything she does.
+        Give her strength when she is tired,
+        peace when she overthinks,
+        wisdom when she has difficult decisions,
+        and courage when life becomes overwhelming.
+    </p>
+
+    <p>
+        Help her remember that making mistakes does not mean
+        she has to give up on You.
+        Teach her to return to You with a humble heart.
+    </p>
+
+    <p>
+        Please guide our relationship too.
+        Teach us patience.
+        Teach us self-control.
+        Teach us forgiveness.
+        Teach us honesty.
+        Teach us faithfulness.
+    </p>
+
+    <p>
+        Help us become better people and better partners,
+        while keeping You at the center of our lives.
+    </p>
+
+    <p>
+        When we become weak, remind us to seek You.
+        When we become confused, give us wisdom.
+        When we hurt each other, teach us to apologize,
+        forgive, and change.
+    </p>
+
+    <p>
+        Please protect Wifey wherever she goes.
+        Give her peace in school, at home, and everywhere
+        she needs to be.
+    </p>
+
+    <p>
+        And Lord, help me become a man who doesn't simply say
+        that he loves her, but someone who shows it through
+        patience, faithfulness, responsibility, and actions.
+    </p>
+
+    <p>
+        Amen. 💞
+    </p>
+
+</section>
+
+
+<!-- =========================================================
+     BIBLE VERSE
+========================================================= -->
+
+<section class="card">
+
+    <h3>
+        September Verse 📖
+    </h3>
+
+    <p class="verse">
+
+        “Commit your way to the LORD;
+        trust in him and he will do this.”
+
+    </p>
+
+    <p class="verse-reference">
+        — Psalm 37:5
+    </p>
+
+    <div class="highlight">
+
+        We don't need to know everything that September will
+        bring.
+
+        <br><br>
+
+        We just need to keep walking with God,
+        one day at a time.
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     OVERTHINKING
+========================================================= -->
+
+<section class="card center">
+
+    <h3>
+        When Your Mind Gets Loud 🥺
+    </h3>
+
+    <p>
+        Choose what you're feeling and I'll leave you a little
+        reminder.
+    </p>
+
+    <div class="reminder-buttons">
+
+        <button onclick="showReminder(0)">
+            I'm overthinking
+        </button>
+
+        <button onclick="showReminder(1)">
+            I feel guilty
+        </button>
+
+        <button onclick="showReminder(2)">
+            I feel far from God
+        </button>
+
+        <button onclick="showReminder(3)">
+            I miss Hubby
+        </button>
+
+    </div>
+
+    <div
+        id="reminder"
+        class="highlight hidden"
+    ></div>
+
+</section>
+
+
+<!-- =========================================================
+     GRATITUDE
+========================================================= -->
+
+<section class="card center">
+
+    <h3>
+        Things I'm Grateful For 🙏
+    </h3>
+
+    <p>
+        There are so many things I appreciate about you.
+        Tap below for one.
+    </p>
+
+    <button
+        class="action-btn"
+        onclick="showGratitude()"
+    >
+        Give me one 💌
+    </button>
+
+    <div
+        id="gratitude"
+        class="gratitude-result hidden"
+    ></div>
+
+</section>
+
+
+<!-- =========================================================
+     OUR STORY TIMELINE
+========================================================= -->
+
+<section class="card">
+
+    <h3>
+        A Little Chapter Of Us 📖
+    </h3>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <h4>
+                Chapter 1 — We Found Each Other
+            </h4>
+
+            <p>
+                Two people who didn't know how many memories
+                were waiting ahead of them.
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h4>
+                Chapter 2 — We Learned Each Other
+            </h4>
+
+            <p>
+                We discovered each other's fears, habits,
+                dreams, weaknesses, and little things that
+                make us smile.
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h4>
+                Chapter 3 — We Faced Difficult Days
+            </h4>
+
+            <p>
+                Not every chapter was easy.
+                But the difficult moments taught us things
+                that easy days never could.
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h4>
+                Chapter 4 — We Started Growing
+            </h4>
+
+            <p>
+                We began learning that love isn't only about
+                feelings. It's also about choices, patience,
+                forgiveness, and faithfulness.
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h4>
+                Chapter 5 — September
+            </h4>
+
+            <p>
+                A new page.
+                A new month.
+                Another opportunity to become better.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PHOTO MEMORIES
+========================================================= -->
+
+<section class="card">
+
+    <h3>
+        Little Memories 📸
+    </h3>
+
+    <p class="center">
+        Replace these pictures with your favorite memories.
+    </p>
+
+    <div class="photo-grid">
+
+        <img src="photo1.jpg" alt="Memory 1">
+
+        <img src="photo2.jpg" alt="Memory 2">
+
+        <img src="photo3.jpg" alt="Memory 3">
+
+        <img src="your-photo.jpg" alt="Memory 4">
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     HEART GAME
+========================================================= -->
+
+<section class="card heart-game">
+
+    <h3>
+        Tap The Hearts 💞
+    </h3>
+
+    <p>
+        Tap every heart to unlock something from Hubby.
+    </p>
+
+    <div id="heart-container"></div>
+
+    <p id="heart-result"></p>
+
+</section>
+
+
+<!-- =========================================================
+     SECRET
+========================================================= -->
+
+<section class="card center">
+
+    <h3>
+        A Secret From Hubby 🔐
+    </h3>
+
+    <p>
+        Only open this when you really need a little reminder.
+    </p>
+
+    <button
+        class="secret-button"
+        onclick="openSecret()"
+    >
+        🔒 Open only when you miss me
+    </button>
+
+    <div
+        id="secret"
+        class="secret-message hidden"
+    >
+
+        <div class="secret-heart">
+            💗
+        </div>
+
+        <h3 style="color:white;">
+            Wifey…
+        </h3>
+
+        <p>
+            If you're reading this because you miss me,
+            close your eyes for a second.
+        </p>
+
+        <p>
+            Imagine me sitting beside you,
+            telling you that you're going to be okay.
+        </p>
+
+        <p>
+            I may not always know exactly what you're feeling,
+            but I'll always want to understand.
+        </p>
+
+        <p>
+            You don't have to be perfect for me to love you.
+        </p>
+
+        <p>
+            And you don't have to pretend to be strong every
+            second of every day.
+        </p>
+
+        <p>
+            Rest when you need to.
+            Pray when you're afraid.
+            Cry when you need to.
+            And remember that tomorrow is another opportunity
+            to begin again.
+        </p>
+
+        <p>
+            I love you, Wifey. 🌷
+        </p>
+
+        <p>
+            — Hubby 💞
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL LETTER
+========================================================= -->
+
+<section class="card letter">
+
+    <h3>
+        Before You Close This… 🌷
+    </h3>
+
+    <p>
+        Wifey, I don't know what September will bring.
+    </p>
+
+    <p>
+        Maybe we'll have amazing days.
+        Maybe we'll have stressful days.
+        Maybe we'll laugh until our stomachs hurt.
+        Maybe we'll have moments where we don't understand
+        each other.
+    </p>
+
+    <p>
+        But I hope that no matter what happens,
+        we remember that we are still learning.
+    </p>
+
+    <div class="highlight">
+
+        We don't need a perfect relationship.
+
+        <br><br>
+
+        We need a relationship where two imperfect people
+        are willing to keep growing.
+
+    </div>
+
+    <p>
+        I want September to be a month where we become more
+        patient with each other.
+    </p>
+
+    <p>
+        More understanding.
+        More honest.
+        More faithful.
+        More intentional.
+    </p>
+
+    <p>
+        And closer to God.
+    </p>
+
+    <p>
+        Thank you for being part of my life.
+    </p>
+
+    <p>
+        Thank you for the memories.
+        Thank you for the laughs.
+        Thank you for the conversations.
+        Thank you even for the difficult moments,
+        because they taught me things about myself.
+    </p>
+
+    <p>
+        Whatever happens next,
+        I want to keep choosing growth.
+    </p>
+
+    <p>
+        Happy September, my Wifey. 🌷
+    </p>
+
+    <div class="signature">
+
+        I love you.<br>
+
+        Always your Hubby 💗
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    Made with love for September 2026 🌷
+
+    <br>
+
+    Hubby → Wifey
+
+    <br><br>
+
+    “One day at a time. One prayer at a time.”
+
+</footer>
+
+
+</main>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+function toggleMusic(){
+
+    const audio =
+        document.getElementById("audio-player");
+
+    const icon =
+        document.getElementById("music-icon");
+
+    const text =
+        document.getElementById("music-text");
+
+    if(audio.paused){
+
+        audio.style.display="block";
+
+        audio.play();
+
+        icon.textContent="⏸️";
+
+        text.textContent="Pause Our Song";
+
+    }else{
+
+        audio.pause();
+
+        icon.textContent="🎵";
+
+        text.textContent="Play Our Song";
+
+    }
+
+}
+
+
+/* =========================================================
+   COMFORT
+========================================================= */
+
+function showComfort(){
+
+    const box =
+        document.getElementById("comfort");
+
+    box.classList.remove("hidden");
+
+    box.classList.add("reveal");
+
+}
+
+
+/* =========================================================
+   REMINDERS
+========================================================= */
+
+const reminders = [
+
+    "Wifey, remember that a thought is not automatically a fact. Breathe first. Pray first. Don't let fear make decisions for you. 💞",
+
+    "Feeling guilty doesn't mean you're hopeless. Learn from what happened, bring it to God, and choose to do better. You can begin again. 🌷",
+
+    "If you feel far from God, don't assume He stopped loving you. Take one small step toward Him. One prayer can be a beginning. ✝️",
+
+    "If you miss me, remember that a busy moment doesn't erase what we have. Take care of yourself, pray, and know that Hubby is thinking of you too. 💗"
+
+];
+
+
+function showReminder(index){
+
+    const box =
+        document.getElementById("reminder");
+
+    box.textContent =
+        reminders[index];
+
+    box.classList.remove("hidden");
+
+    box.classList.add("reveal");
+
+}
+
+
+/* =========================================================
+   GRATITUDE
+========================================================= */
+
+const gratitude = [
+
+    "I'm grateful for the way you care about the people you love. 💗",
+
+    "I'm grateful for your effort, even when you're tired.",
+
+    "I'm grateful that you encourage me to become closer to God.",
+
+    "I'm grateful for every little memory we've created.",
+
+    "I'm grateful for your laughter and the way you can make ordinary moments special.",
+
+    "I'm grateful that I get to know the real you—not only the happy version.",
+
+    "I'm grateful that despite difficult moments, you're still trying.",
+
+    "I'm grateful for you simply being you. 🌷"
+
+];
+
+
+let gratitudeIndex = 0;
+
+
+function showGratitude(){
+
+    const box =
+        document.getElementById("gratitude");
+
+    box.textContent =
+        gratitude[gratitudeIndex];
+
+    box.classList.remove("hidden");
+
+    box.classList.add("reveal");
+
+    gratitudeIndex++;
+
+    if(gratitudeIndex >= gratitude.length){
+
+        gratitudeIndex=0;
+
+    }
+
+}
+
+
+/* =========================================================
+   HEART GAME
+========================================================= */
+
+const heartContainer =
+    document.getElementById("heart-container");
+
+const heartResult =
+    document.getElementById("heart-result");
+
+
+let heartsTapped=0;
+
+const totalHearts=9;
+
+
+for(let i=0;i<totalHearts;i++){
+
+    const button =
+        document.createElement("button");
+
+    button.className="tap-heart";
+
+    button.textContent="💗";
+
+    button.onclick=function(){
+
+        if(button.classList.contains("clicked")){
+            return;
+        }
+
+        button.classList.add("clicked");
+
+        heartsTapped++;
+
+        if(heartsTapped===totalHearts){
+
+            heartResult.innerHTML=
+            "You found all of them! 🥺💗<br><br>" +
+
+            "Here's your reward:<br>" +
+
+            "<strong>" +
+
+            "No matter how many chapters we go through, " +
+
+            "I hope we keep choosing love, growth, faithfulness, " +
+
+            "and God. 🌷" +
+
+            "</strong>";
+
+        }
+
+    };
+
+    heartContainer.appendChild(button);
+
+}
+
+
+/* =========================================================
+   SECRET
+========================================================= */
+
+function openSecret(){
+
+    const secret =
+        document.getElementById("secret");
+
+    secret.classList.remove("hidden");
+
+    secret.classList.add("reveal");
+
+    setTimeout(function(){
+
+        secret.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    },100);
+
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+const floating =
+    document.getElementById("floating-hearts");
+
+const symbols=[
+    "♡",
+    "♥",
+    "💗",
+    "🌸",
+    "✿"
+];
+
+
+for(let i=0;i<18;i++){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className="floating-heart";
+
+    heart.textContent =
+        symbols[
+            Math.floor(
+                Math.random()*symbols.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random()*100+"vw";
+
+    heart.style.fontSize =
+        (12+Math.random()*22)+"px";
+
+    heart.style.animationDuration =
+        (6+Math.random()*8)+"s";
+
+    heart.style.animationDelay =
+        (Math.random()*8)+"s";
+
+    floating.appendChild(heart);
+
+}
+
+
+/* =========================================================
+   PREVENT AUDIO AUTOPLAY
+========================================================= */
+
+document.addEventListener(
+    "visibilitychange",
+    function(){
+
+        if(document.hidden){
+
+            const audio =
+                document.getElementById("audio-player");
+
+            if(!audio.paused){
+
+                audio.pause();
+
+                document.getElementById(
+                    "music-icon"
+                ).textContent="🎵";
+
+                document.getElementById(
+                    "music-text"
+                ).textContent="Play Our Song";
+
+            }
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
